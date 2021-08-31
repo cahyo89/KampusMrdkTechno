@@ -1,0 +1,4 @@
+nah tugas temen2 sebelum pertemuan 1:
+1. Clone dan buat branch masing2
+2. pada branch masing2 silahkan install NextJs pada folder masing2
+3. install juga tailwind pada project masing2
