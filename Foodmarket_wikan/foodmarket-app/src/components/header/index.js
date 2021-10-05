@@ -1,38 +1,63 @@
 import Link from "next/link";
+import Image from "next/image";
+import cartPict from "../gambar/cart.png";
+import searchPict from "../gambar/search.png";
+
 import Nav from "./nav";
 function Header() {
   return (
     <header className="text-gray-600 body-font">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
-            viewBox="0 0 24 24"
-          >
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-          </svg>
-          <span className="ml-3 text-xl">Tailblocks</span>
+          <span className="mr-10 ml-3 text-xl">Food Market</span>
         </a>
         <Nav />
-        <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
-          Button
-          <svg
-            fill="none"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            className="w-4 h-4 ml-1"
-            viewBox="0 0 24 24"
-          >
-            <path d="M5 12h14M12 5l7 7-7 7"></path>
-          </svg>
+        {/* icon search */}
+        <button
+          type="button"
+          className="inline-block py-2 px-3 hover:bg-gray-200 relative"
+        >
+          <div className="flex items-center h-5">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21 21L16.514 16.506L21 21ZM19 10.5C19 12.7543 18.1045 14.9163 16.5104 16.5104C14.9163 18.1045 12.7543 19 10.5 19C8.24566 19 6.08365 18.1045 4.48959 16.5104C2.89553 14.9163 2 12.7543 2 10.5C2 8.24566 2.89553 6.08365 4.48959 4.48959C6.08365 2.89553 8.24566 2 10.5 2C12.7543 2 14.9163 2.89553 16.5104 4.48959C18.1045 6.08365 19 8.24566 19 10.5V10.5Z"
+                stroke="black"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+          </div>
+        </button>
+
+        {/* icon cart */}
+        <button
+          type="button"
+          className="inline-block py-2 px-3 hover:bg-gray-200 relative"
+        >
+          <div className="flex items-center h-5">
+            <svg
+              width="24"
+              height="22"
+              viewBox="0 0 24 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21.6304 15.0799H7.67339L8.37417 13.7715L20.0179 13.7521C20.4117 13.7521 20.7492 13.4943 20.8195 13.1377L22.432 4.86406C22.4742 4.64707 22.4109 4.42363 22.2562 4.25391C22.1797 4.17038 22.0844 4.10309 21.9767 4.05672C21.8691 4.01034 21.7517 3.98599 21.6328 3.98535L6.82026 3.94023L6.6937 3.39453C6.61401 3.04648 6.27183 2.79297 5.88276 2.79297H2.26167C2.04224 2.79297 1.83181 2.87287 1.67665 3.0151C1.52149 3.15733 1.43433 3.35023 1.43433 3.55137C1.43433 3.75251 1.52149 3.94541 1.67665 4.08764C1.83181 4.22986 2.04224 4.30977 2.26167 4.30977H5.21245L5.76558 6.72031L7.1273 12.7639L5.37417 15.3871C5.28313 15.4997 5.22829 15.6335 5.21587 15.7732C5.20344 15.9129 5.23392 16.0531 5.30386 16.1777C5.44448 16.4334 5.72808 16.5945 6.04214 16.5945H7.51401C7.20023 16.9766 7.03074 17.4419 7.0312 17.9201C7.0312 19.1361 8.10933 20.1244 9.43589 20.1244C10.7625 20.1244 11.8406 19.1361 11.8406 17.9201C11.8406 17.441 11.6671 16.9748 11.3578 16.5945H15.1335C14.8198 16.9766 14.6503 17.4419 14.6507 17.9201C14.6507 19.1361 15.7289 20.1244 17.0554 20.1244C18.382 20.1244 19.4601 19.1361 19.4601 17.9201C19.4601 17.441 19.2867 16.9748 18.9773 16.5945H21.6328C22.0875 16.5945 22.4601 16.2551 22.4601 15.8361C22.4587 15.6352 22.3707 15.4429 22.2153 15.3012C22.0599 15.1596 21.8496 15.08 21.6304 15.0799V15.0799ZM7.1648 5.43555L20.6601 5.47637L19.3382 12.2611L8.73745 12.2783L7.1648 5.43555ZM9.43589 18.599C9.02808 18.599 8.69526 18.2939 8.69526 17.9201C8.69526 17.5463 9.02808 17.2412 9.43589 17.2412C9.8437 17.2412 10.1765 17.5463 10.1765 17.9201C10.1765 18.1002 10.0985 18.2729 9.95959 18.4002C9.8207 18.5275 9.63232 18.599 9.43589 18.599V18.599ZM17.0554 18.599C16.6476 18.599 16.3148 18.2939 16.3148 17.9201C16.3148 17.5463 16.6476 17.2412 17.0554 17.2412C17.4632 17.2412 17.796 17.5463 17.796 17.9201C17.796 18.1002 17.718 18.2729 17.5791 18.4002C17.4402 18.5275 17.2518 18.599 17.0554 18.599V18.599Z"
+                fill="black"
+              />
+            </svg>
+          </div>
+        </button>
+
+        <button className="bg-yellow-400 hover:bg-yellow-700 text-black font-bold py-2 px-4 rounded">
+          Login
         </button>
       </div>
     </header>

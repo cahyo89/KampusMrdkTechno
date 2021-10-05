@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Batagor",
+    "rating": "5",
+    "price": 50000,
+    "image": "https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/don-t-leave-indonesia-before-you-get-a-taste-of-these-12-favorite-local-foods/batagor.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Mie Ayam",
+    "rating": "4.5",
+    "price": 60000,
+    "image": "https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/don-t-leave-indonesia-before-you-get-a-taste-of-these-12-favorite-local-foods/mieayam.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Bakso",
+    "rating": "4.5",
+    "price": 65000,
+    "image": "https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/don-t-leave-indonesia-before-you-get-a-taste-of-these-12-favorite-local-foods/bakso.jpg"
+  }
+]
